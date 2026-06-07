@@ -37,11 +37,14 @@ The controller communicates with an external display module over UART at 115200 
 ```
 CMD:ON   — turn pump on
 CMD:OFF  — turn pump off
+CMD:PRESSURE_LIMITS:<min>,<max> — save pressure limits
+CMD:GET_PRESSURE_LIMITS         — request saved pressure limits
 ```
 
 **Outgoing status (controller → display):**
 ```
 PUMP:<0|1>,WATER:<0|1>,BATHS:<n>
+PRESSURE_LIMITS:<min>,<max>
 ```
 
 ## Build & Flash
